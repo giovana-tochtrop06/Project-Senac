@@ -41,6 +41,7 @@ body {
     font-size: 25px;
     line-height: 22px;
     letter-spacing: .0015em;
+    cursor: pointer;
 }
 
 .search-block {
@@ -69,19 +70,13 @@ body {
     flex-direction: row;
 }
 
-.item-account {
-    margin: 0 20px 0 20px;
-}
-
-.item-favorite {
-    margin: 0 20px 0 20px;
-}
-
+.item-account,
+.item-favorite,
 .item-minicart {
     margin: 0 20px 0 20px;
 }
 
-.header-nav a {
+.header-nav span {
     text-decoration: none;
     cursor: pointer;
     color: #fff;
@@ -93,15 +88,15 @@ body {
     cursor: pointer;
 }
 
-.header-nav a:hover {
+.header-nav span:hover {
     text-decoration: underline;
 }
 
-/* FOOTER */
+/* -------------------------------- FOOTER -------------------------------------------*/
 
 #CC-Footer {
     background: #043f46;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 70px;
@@ -126,4 +121,422 @@ body {
 
 .footer-nav-footer span:hover {
     text-decoration: underline;
+}
+
+
+.department {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 6;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.open {
+    visibility: visible;
+    transition: all .25s ease-in-out;
+}
+
+.close {
+    visibility: hidden;
+    transition: all .25s ease-in-out;
+}
+
+.depart-nav-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    background: #fff;
+}
+
+.depart-nav-header {
+    height: 80px;
+    background: #075f6a;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.depart-nav-header span {
+    margin-left: 30px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: .0015em;
+    cursor: pointer;
+}
+
+.depart-nav-products {
+    display: flex;
+    flex-direction: column;
+    color: #484343;
+    padding: 30px 0 50px 30px;
+}
+
+.depart-nav-products span {
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: .0015em;
+    cursor: pointer;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.depart-nav-products span:hover {
+    text-decoration: underline;
+}
+
+
+.depart-nav-account {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px 60px 30px;
+}
+
+.depart-item-account,
+.depart-item-favorite,
+.depart-item-cadastro {
+    margin-bottom: 10px;
+}
+
+.depart-nav-account a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #484343;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: .0015em;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+
+.header-conta {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 6;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.conta-nav-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    background: #fff;
+    position: fixed;
+    right: 0;
+}
+
+.conta-nav-header {
+    height: 80px;
+    background: #075f6a;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.conta-nav-header span {
+    margin-left: 30px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: .0015em;
+    cursor: pointer;
+}
+
+.conta-nav-account {
+    display: flex;
+    flex-direction: column;
+    color: #484343;
+    padding: 30px 0 50px 30px
+}
+
+.conta-nav-account span {
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: .0015em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.conta-item-account,
+.conta-item-cadastro,
+.conta-item-favorite {
+    margin-bottom: 20px;
+}
+
+.openLogin {
+    visibility: visible !important;
+    transition: all .25s ease-in-out;
+}
+
+.closeLogin {
+    visibility: hidden !important;
+    transition: all .25s ease-in-out;
+}
+
+/* -------------------------------- MODAL DE LOGIN -------------------------------------------*/
+
+.logar {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 6;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.openLogar {
+    visibility: visible;
+    transition: all .25s ease-in-out;
+}
+
+.closeLogar {
+    visibility: hidden;
+    transition: all .25s ease-in-out;
+}
+
+.logar-container {
+    height: 335px;
+    width: 480px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.logar-header {
+    width: 100%;
+    height: 65px;
+    background-color: #075f6a;
+    display: flex;
+    align-items: center;
+}
+
+.logar-header span {
+    margin-left: 30px;
+    font-size: 24px;
+    font-family: 'PT Sans', sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+.logar-body {
+    width: 100%;
+    height: 79%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logar-email-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: -55px;
+    margin-top: 25px;
+}
+
+.logar-email-content span {
+    color: #757575;
+    width: 100%;
+    margin: 0 0px 5px 210px;
+}
+
+.logar-email-content input {
+    height: 30px;
+    width: 300px;
+}
+
+.logar-senha-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.logar-senha-content span {
+    color: #757575;
+    width: 100%;
+    margin: 0 0px 5px 210px;
+}
+
+.logar-senha-content input {
+    height: 30px;
+    width: 298px;
+}
+
+.no-password {
+    color: #141414;
+    cursor: pointer;
+    bottom: 30px;
+    position: relative;
+    right: 80px;
+    font-size: 14px;
+}
+
+.no-password:hover {
+    text-decoration: underline;
+}
+
+.logar-btn {
+    color: white;
+    background: #075f6a;
+    padding: 15px 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    top: -12px;
+}
+
+/* -------------------------------- MODAL DE CARRINHO -------------------------------------------*/
+
+.carrinho {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 6;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.carrinho-nav-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    background: #fff;
+    position: fixed;
+    right: 0;
+}
+
+.carrinho-nav-header {
+    height: 80px;
+    background: #075f6a;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.carrinho-nav-header span {
+    margin-left: 30px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: .0015em;
+    cursor: pointer;
+}
+
+.carrinho-nav-account {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+}
+
+.carrinho-nav-account span {
+    font-family: 'PT Sans', sans-serif;
+    color: #979797;
+    font-size: 23px;
+}
+
+.openCarrinho {
+    visibility: visible !important;
+    transition: all .25s ease-in-out;
+}
+
+.closeCarrinho {
+    visibility: hidden !important;
+    transition: all .25s ease-in-out;
+}
+
+/* -------------------------------- MODAL DE FAVORITOS -------------------------------------------*/
+
+.favoritos {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 6;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+}
+
+.favorito-nav-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 300px;
+    background: #fff;
+    position: fixed;
+    right: 0;
+}
+
+.favorito-nav-header {
+    height: 80px;
+    background: #075f6a;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.favorito-nav-header span {
+    margin-left: 30px;
+    font-family: 'PT Sans', sans-serif;
+    font-style: normal;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: .0015em;
+    cursor: pointer;
+}
+
+.favorito-nav-account {
+    display: flex;
+    justify-content: center;
+    margin-top: 160px;
+}
+
+.favorito-nav-account span {
+    font-family: 'PT Sans', sans-serif;
+    color: #979797;
+    font-size: 23px;
+}
+
+.openFavorito {
+    visibility: visible !important;
+    transition: all .25s ease-in-out;
+}
+
+.closeFavorito {
+    visibility: hidden !important;
+    transition: all .25s ease-in-out;
 }
