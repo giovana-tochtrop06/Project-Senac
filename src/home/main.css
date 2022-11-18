@@ -793,4 +793,5 @@ body {
     position: relative;
     left: 14px;
     bottom: 20px;
+    cursor: pointer;
 }
